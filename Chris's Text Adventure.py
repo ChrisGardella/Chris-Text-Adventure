@@ -23,7 +23,7 @@ def character():
     if number == 1:
         print("You are a wizard. You are the master of magic and are very wise.")
     elif number == 2:
-        print("You are a knight! With the best armor and sword this adventure should be nothing!")
+        print("You are a knight! With the best armor this adventure should be nothing!")
     elif number == 3:
         print("You are a farmer, good luck.")
     elif number == 4:
