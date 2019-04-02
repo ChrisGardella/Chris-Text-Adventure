@@ -1,5 +1,23 @@
 import random
 
+def randenemy():
+    enemy = random.randint(1,5)
+    if enemy == 1:
+        attacker = "Skeleton"
+        print(attacker)
+    elif enemy == 2:
+        attacker = "Mummy"
+        print(attacker)
+    elif enemy == 3:
+        attacker = "Group of vampire bats"
+        print(attacker)
+    elif enemy == 4:
+        attacker = "Temple gaurds"
+        print(attacker)
+    elif enemy == 5:
+        attacker = "Zombie"
+        print (attacker)
+
 def character():
     number = random.randint(1,3)
     if number == 1:
@@ -25,4 +43,4 @@ def intro():
 print ("You have traveled a long way to find a temple you saw in a dream.... and it was true! You see the door in front of you.")
 character()
 intro()
-
+randenemy()
