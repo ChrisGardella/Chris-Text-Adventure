@@ -1,7 +1,7 @@
 import random
 
 def randenemy():
-    enemy = random.randint(1,5)
+    enemy = random.randint(1,6)
     if enemy == 1:
         attacker = "Skeleton"
         print(attacker)
@@ -12,10 +12,13 @@ def randenemy():
         attacker = "Group of vampire bats"
         print(attacker)
     elif enemy == 4:
-        attacker = "Temple gaurds"
+        attacker = "Temple guards"
         print(attacker)
     elif enemy == 5:
         attacker = "Zombie"
+        print (attacker)
+    elif enemy == 6:
+        attacker = "Plagued rats"
         print (attacker)
 
 def character():
