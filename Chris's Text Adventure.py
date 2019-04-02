@@ -19,13 +19,17 @@ def randenemy():
         print (attacker)
 
 def character():
-    number = random.randint(1,3)
+    number = random.randint(1,5)
     if number == 1:
         print("You are a wizard. You are the master of magic and are very wise.")
     elif number == 2:
-        print("You are a brave knight! With the best armor and sword in the land this should be nothing!")
+        print("You are a knight! With the best armor and sword this adventure should be nothing!")
     elif number == 3:
         print("You are a farmer, good luck.")
+    elif number == 4:
+        print("Your are an archer. You are a skilled bowman who rarely misses.")
+    elif number == 5:
+        print("You are an assassin. You are really good at killing stuff.")
 
 
 def intro():
