@@ -1,7 +1,15 @@
+def program_header(title):
+    import datetime
+    date_object = datetime.date.today()
+    print("Christopher Gardella")
+    print(date_object)
+    print(title)
+    print("Email: 00309225@student.necc.edu")
+
 import random
 
 def randenemy():
-    enemy = random.randint(1,6)
+    enemy = random.randint(1,7)
     if enemy == 1:
         attacker = "Skeleton"
         print(attacker)
@@ -19,6 +27,9 @@ def randenemy():
         print (attacker)
     elif enemy == 6:
         attacker = "Plagued rats"
+        print (attacker)
+    elif enemy == 7:
+        attacker = "Giant Spider"
         print (attacker)
 
 def character():
@@ -47,7 +58,11 @@ def intro():
         print("I said yes or no didn't I?")
         intro()
 
+program_header("Chris' Text Adventure")
+print("")
 print ("You have traveled a long way to find a temple you saw in a dream.... and it was true! You see the door in front of you.")
 character()
 intro()
-randenemy()
+
+print ("You light a torch and see three tunnels ahead of you. You have no indication where any of them lead. Do you go right, left or straight? ")
+tunnel = input()
