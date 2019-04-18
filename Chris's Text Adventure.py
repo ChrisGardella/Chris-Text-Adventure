@@ -1,3 +1,4 @@
+#program header funstion
 def program_header(title):
     import datetime
     date_object = datetime.date.today()
@@ -6,8 +7,10 @@ def program_header(title):
     print(title)
     print("Email: 00309225@student.necc.edu")
 
+#import random library
 import random
 
+#function that chooses a random enemy from 7 choices
 def randenemy():
     enemy = random.randint(1,7)
     if enemy == 1:
@@ -32,6 +35,7 @@ def randenemy():
         attacker = "Giant Spider"
         print (attacker)
 
+#randomly chooses 1 of 5 characters
 def character():
     number = random.randint(1,5)
     if number == 1:
@@ -45,7 +49,7 @@ def character():
     elif number == 5:
         print("You are an assassin. You are really good at killing stuff.")
 
-
+#function for intro, loops until someone chooses yes or no
 def intro():
     print ("Do you wish to enter? Yes or No")
     answer = input()
@@ -58,11 +62,22 @@ def intro():
         print("I said yes or no didn't I?")
         intro()
 
+#function that chooses 1 of 2 paths
+def tunnelchoice():
+    tunnel = input()
+    if tunnel=="right" or tunnel=="Right":
+        print ("You chose to go right.")
+        #call funtion of right path
+    if tunnel=="left" or tunnel=="Left":
+        print ("You chose to go left.")
+        #call funstion of left path
+
+#body of program
 program_header("Chris' Text Adventure")
 print("")
 print ("You have traveled a long way to find a temple you saw in a dream.... and it was true! You see the door in front of you.")
 character()
 intro()
+print ("You light a torch and see two tunnels ahead of you. You have no indication where either of them lead. Do you go right or left?")
 
-print ("You light a torch and see three tunnels ahead of you. You have no indication where any of them lead. Do you go right, left or straight? ")
-tunnel = input()
+
