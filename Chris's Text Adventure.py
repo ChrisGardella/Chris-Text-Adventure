@@ -67,10 +67,20 @@ def tunnelchoice():
     tunnel = input()
     if tunnel=="right" or tunnel=="Right":
         print ("You chose to go right.")
-        #call funtion of right path
+        right()
     if tunnel=="left" or tunnel=="Left":
         print ("You chose to go left.")
-        #call funstion of left path
+        left()
+
+#Story path if you chose right hallway
+def right():
+    print("right")
+    #this is for right path
+
+#story path if you chose left hallway
+def left():
+    print("left")
+    #this is left path
 
 #body of program
 program_header("Chris' Text Adventure")
