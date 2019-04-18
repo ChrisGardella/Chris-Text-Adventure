@@ -74,7 +74,9 @@ def tunnelchoice():
 
 #Story path if you chose right hallway
 def right():
-    print("right")
+    print("You walk down the dark, moss covered hallway towards a distant light.")
+    print("On the way you accidently step on a pressure plate and a section of wall closes the tunnel behind you!")
+    print("No going back now....")
     #this is for right path
 
 #story path if you chose left hallway
