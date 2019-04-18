@@ -79,5 +79,5 @@ print ("You have traveled a long way to find a temple you saw in a dream.... and
 character()
 intro()
 print ("You light a torch and see two tunnels ahead of you. You have no indication where either of them lead. Do you go right or left?")
-
+tunnelchoice()
 
