@@ -1,4 +1,4 @@
-#program header funstion
+# program header funstion
 def program_header(title):
     import datetime
     date_object = datetime.date.today()
@@ -7,10 +7,10 @@ def program_header(title):
     print(title)
     print("Email: 00309225@student.necc.edu")
 
-#import random library
+# import random library
 import random
 
-#function that chooses a random enemy from 7 choices
+# function that chooses a random enemy from 7 choices
 def randenemy():
     enemy = random.randint(1,7)
     if enemy == 1:
@@ -35,7 +35,7 @@ def randenemy():
         attacker = "Giant Spider"
         print (attacker)
 
-#randomly chooses 1 of 5 characters
+# randomly chooses 1 of 5 characters
 def character():
     number = random.randint(1,5)
     if number == 1:
@@ -49,7 +49,7 @@ def character():
     elif number == 5:
         print("You are an assassin. You are really good at killing stuff.")
 
-#function for intro, loops until someone chooses yes or no
+# function for intro, loops until someone chooses yes or no
 def intro():
     print ("Do you wish to enter? Yes or No")
     answer = input()
@@ -62,7 +62,7 @@ def intro():
         print("I said yes or no didn't I?")
         intro()
 
-#function that chooses 1 of 2 paths
+# function that chooses 1 of 2 paths
 def tunnelchoice():
     tunnel = input()
     if tunnel=="right" or tunnel=="Right":
@@ -72,24 +72,36 @@ def tunnelchoice():
         print ("You chose to go left.")
         left()
 
-#Story path if you chose right hallway
+# Story path if you chose right hallway
 def right():
     print("You walk down the dark, moss covered hallway towards a distant light.")
-    print("On the way you accidently step on a pressure plate and a section of wall closes the tunnel behind you!")
+    print("On the way you accidentally step on a pressure plate and a section of wall closes the tunnel behind you!")
     print("No going back now....")
-    #this is for right path
+    trap1 = input("You start to walk towards the light. Do you check for traps? Yes or No?")
+    if trap1 == "Yes" or trap1== "yes":
+        print ("You check carefully for traps and find a spike pit, you successfully avoid it and keep heading towards the light.")
+    else:
+        print("You decided to not check for traps and fell into a spike pit, you died...")
+        exit()
+    print("Once you reach the light, you find a room with already lit torches and a closed door on the other side.")
+    print("You try and open the door but it wont budge. You then notice a lever on one side and a button on the other side of the door frame.")
+    door = input("Do you pull the lever or push the button?")
+    if door == "lever":
+        print("You pull the lever.")
+    if door == "button":
+        print("You push the button.")
 
-#story path if you chose left hallway
+# story path if you chose left hallway
 def left():
     print("left")
-    #this is left path
+    # this is left path
 
-#body of program
+# body of program
 program_header("Chris' Text Adventure")
 print("")
-print ("You have traveled a long way to find a temple you saw in a dream.... and it was true! You see the door in front of you.")
+print("You have traveled a long way to find a temple you saw in a dream.... and it was true! You see the door in front of you.")
 character()
 intro()
-print ("You light a torch and see two tunnels ahead of you. You have no indication where either of them lead. Do you go right or left?")
+print("You light a torch and see two tunnels ahead of you. You have no indication where either of them lead. Do you go right or left?")
 tunnelchoice()
 
