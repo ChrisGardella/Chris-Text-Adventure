@@ -15,25 +15,25 @@ def randenemy():
     enemy = random.randint(1,7)
     if enemy == 1:
         attacker = "Skeleton"
-        print(attacker)
+        print("A skeleton has decided to attack you!")
     elif enemy == 2:
         attacker = "Mummy"
-        print(attacker)
+        print("A mummy has decided to attack you!")
     elif enemy == 3:
         attacker = "Group of vampire bats"
-        print(attacker)
+        print("A group of vampire bats have decided to attack you!")
     elif enemy == 4:
         attacker = "Temple guards"
-        print(attacker)
+        print("The temple guards decided to attack you!")
     elif enemy == 5:
         attacker = "Zombie"
-        print (attacker)
+        print("A zombie has decided to attack you!")
     elif enemy == 6:
         attacker = "Plagued rats"
-        print (attacker)
+        print("Some plagued rats have decided to attack you!")
     elif enemy == 7:
         attacker = "Giant Spider"
-        print (attacker)
+        print("A giant spider has decided to attack you!")
 
 # randomly chooses 1 of 5 characters
 def character():
@@ -78,7 +78,7 @@ def right():
     print("On the way you accidentally step on a pressure plate and a section of wall closes the tunnel behind you!")
     print("No going back now....")
     trap1 = input("You start to walk towards the light. Do you check for traps? Yes or No?")
-    if trap1 == "Yes" or trap1== "yes":
+    if trap1 == "Yes" or trap1 == "yes":
         print ("You check carefully for traps and find a spike pit, you successfully avoid it and keep heading towards the light.")
     else:
         print("You decided to not check for traps and fell into a spike pit, you died...")
@@ -87,7 +87,8 @@ def right():
     print("You try and open the door but it wont budge. You then notice a lever on one side and a button on the other side of the door frame.")
     door = input("Do you pull the lever or push the button?")
     if door == "lever":
-        print("You pull the lever.")
+        print("You pull the lever. You hear a loud noise from behind the wall and the door opens. Before you can do anything an enemy appears!")
+        randenemy()
     if door == "button":
         print("You push the button.")
 
