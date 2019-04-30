@@ -72,6 +72,28 @@ def tunnelchoice():
         print ("You chose to go left.")
         left()
 
+def fighting():
+    health=10
+    enemyhealth=20
+    while health > 0 or enemyhealth > 0:
+        playerfight = input("Attack? Yes or No?")
+        healthdeduction = random.randint(0,2)
+        enemydeduction = random.randint(3,5)
+        if playerfight == "Yes" or playerfight == "yes":
+            enemyhealth= enemyhealth- enemydeduction
+            health = health - healthdeduction
+            print("The enemy did",healthdeduction,"damage")
+            print("You did",enemydeduction,"damage")
+            if health <= 0:
+                print("You have died.")
+                exit()
+            if enemyhealth <= 0:
+                print("You defeated the enemy!")
+                break
+        if playerfight == "no" or playerfight == "No":
+            print("You chose not to fight and the enemy killed you.")
+            exit()
+
 # Story path if you chose right hallway
 def right():
     print("You walk down the dark, moss covered hallway towards a distant light.")
@@ -90,7 +112,11 @@ def right():
         print("You pull the lever. You hear a loud noise from behind the wall and the door opens. Before you can do anything an enemy appears!")
         randenemy()
     if door == "button":
-        print("You push the button.")
+        print("You push the button, nothing happens......You then pull the lever.")
+        print("You hear a loud noise from behind the wall and the door opens. Before you can do anything an enemy appears!")
+        randenemy()
+    fighting()
+
 
 # story path if you chose left hallway
 def left():
