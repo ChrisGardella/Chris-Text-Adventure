@@ -72,12 +72,13 @@ def tunnelchoice():
         print ("You chose to go left.")
         left()
 
+# function that controls battles where damage is based off random numbers
 def fighting():
     health=10
     enemyhealth=20
     while health > 0 or enemyhealth > 0:
         playerfight = input("Attack? Yes or No?")
-        healthdeduction = random.randint(0,2)
+        healthdeduction = random.randint(0,3)
         enemydeduction = random.randint(3,5)
         if playerfight == "Yes" or playerfight == "yes":
             enemyhealth= enemyhealth- enemydeduction
@@ -89,16 +90,19 @@ def fighting():
                 exit()
             if enemyhealth <= 0:
                 print("You defeated the enemy!")
+                health=10
+                enemyhealth=20
                 break
         if playerfight == "no" or playerfight == "No":
             print("You chose not to fight and the enemy killed you.")
             exit()
 
-# Story path if you chose right hallway
+# Story path if you chose right tunnel
 def right():
     print("You walk down the dark, moss covered hallway towards a distant light.")
     print("On the way you accidentally step on a pressure plate and a section of wall closes the tunnel behind you!")
     print("No going back now....")
+    print("")
     trap1 = input("You start to walk towards the light. Do you check for traps? Yes or No?")
     if trap1 == "Yes" or trap1 == "yes":
         print ("You check carefully for traps and find a spike pit, you successfully avoid it and keep heading towards the light.")
@@ -107,6 +111,7 @@ def right():
         exit()
     print("Once you reach the light, you find a room with already lit torches and a closed door on the other side.")
     print("You try and open the door but it wont budge. You then notice a lever on one side and a button on the other side of the door frame.")
+    print("")
     door = input("Do you pull the lever or push the button?")
     if door == "lever":
         print("You pull the lever. You hear a loud noise from behind the wall and the door opens. Before you can do anything an enemy appears!")
@@ -116,9 +121,18 @@ def right():
         print("You hear a loud noise from behind the wall and the door opens. Before you can do anything an enemy appears!")
         randenemy()
     fighting()
+    print("Now that the enemy was defeated you walk through the door and are met with a large set of stairs that head down.")
+    print("You start to head down the steps and notice one step looks like it can be pushed in.")
+    print("")
+    stairs = input("Do you wish to push on the step? Yes or No?")
+    if stairs == "Yes" or stairs == "yes":
+        print("You proceed to push down on the step, shortly after you are bombarded with poison arrows. Everything fades to darkness and you die.")
+        exit()
+    if stairs == "No" or stairs == "no":
+        print("You chose to be safe and avoided the step and continued on your way.")
+    print("You finally reach the end of the steps and go through the doorway at the bottom. The door seems to be missing, where did it go?")
 
-
-# story path if you chose left hallway
+# story path if you chose left tunnel
 def left():
     print("left")
     # this is left path
