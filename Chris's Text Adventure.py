@@ -131,6 +131,16 @@ def right():
     if stairs == "No" or stairs == "no":
         print("You chose to be safe and avoided the step and continued on your way.")
     print("You finally reach the end of the steps and go through the doorway at the bottom. The door seems to be missing, where did it go?")
+    print("There is a large gold bar in the middle of the room. Of course you take it, who wouldn't?")
+    gold = input("After you take the bar you start running back the way you came. (1)Do you go carefully or (2)run as fast as you can?")
+    if gold == "1":
+        print("You chose to run carefully back to the entrance avoiding all the traps and just barely making it out before the place collapses!")
+        print("Congrats you made it out with the treasure!You win!")
+        exit()
+    if gold == "2":
+        print("You chose to run back quickly without being careful and accidently drop the bar. To make things worse a giant boulder falls and crushes you.")
+        print("This was all for nothing. You lose.")
+        exit()
 
 # story path if you chose left tunnel
 def left():
