@@ -14,34 +14,24 @@ import random
 def randenemy():
     enemy = random.randint(1, 10)
     if enemy == 1:
-        attacker = "Skeleton"
         print("A skeleton has decided to attack you!")
     elif enemy == 2:
-        attacker = "Mummy"
         print("A mummy has decided to attack you!")
     elif enemy == 3:
-        attacker = "Group of vampire bats"
         print("A group of vampire bats have decided to attack you!")
     elif enemy == 4:
-        attacker = "Temple guards"
         print("The temple guards decided to attack you!")
     elif enemy == 5:
-        attacker = "Zombie"
         print("A zombie has decided to attack you!")
     elif enemy == 6:
-        attacker = "Plagued rats"
         print("Some plagued rats have decided to attack you!")
     elif enemy == 7:
-        attacker = "Giant Spider"
         print("A giant spider has decided to attack you!")
     elif enemy == 8:
-        attacker = "Ghost"
         print("A ghost has decided to attack you! How is this even possible?")
     elif enemy == 9:
-        attacker = "Goblin"
         print("A goblin has decided to attack you!")
     elif enemy == 10:
-        attacker = "demon"
         print("A demon has decided to attack you!")
 
 # randomly chooses 1 of many characters
