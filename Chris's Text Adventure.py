@@ -136,6 +136,7 @@ def right():
     if gold == "1":
         print("You chose to run carefully back to the entrance avoiding all the traps and just barely making it out before the place collapses!")
         print("Congrats you made it out with the treasure!You win!")
+        print("Thank you for playing!")
         exit()
     if gold == "2":
         print("You chose to run back quickly without being careful and accidentally drop the bar. To make things worse a giant boulder falls and crushes you.")
@@ -162,7 +163,33 @@ def left():
             print("You decided to not check for traps and stepped on a pressure plate, two flamethrowers in the wall ignite and you burn alive, you died...")
             exit()
         print("At the end of the path you notice the other path would have lead to here anyway. What was that noise then?")
-    print("You continue on your way and reach a large door that is closed.")
+    print("You continue on your way and reach a large door that is closed. You try to open the door but it doesn't budge.")
+    print("You notice a conveniently placed pile of wood and a fire starter. You also notice an axe lying nearby.")
+    door2 = input("You can only assume a bunch of lumberjacks were here before. Do you (b)urn the door or use the (a)xe?")
+    if door2 == "b":
+        print("You chose to burn the door down, it takes a long time because its a very large door.")
+        print("While you were waiting:")
+        randenemy()
+        fighting()
+        print("After the fight you continue through the now smouldering doorway.")
+    if door2 == "a":
+        print("You try and use the axe to hack your way through the door. This was clearly a mistake because it is a very large door. This is going to take a while.")
+        print("While you are chopping away something happens!")
+        randenemy()
+        fighting()
+        print("After the fight you continue to chop and make your way through.")
+    print("When you enter the room you see a bunch of trinkets lying around that look of value.")
+    print("You decide to take the treasure to become rich. Once you collect it all the place start rumbling.")
+    treasure = input("You see a staircase in the distance and head towards it. Do you proceed with caution? Yes or no?")
+    if treasure == "Yes" or treasure == "yes":
+        print("You chose to run carefully back to the entrance and you notice you came from the right tunnel from the beginning. You avoided all the traps and just barely made it out before the place collapsed!")
+        print("Congrats you made it out with the treasure!You win!")
+        print("Thank you for playing!")
+        exit()
+    if treasure == "No" or treasure == "no":
+        print("You chose to run back quickly without being careful and accidentally drop the treasure down the steps. You try and pick some up but the temple then collapses onto you.")
+        print("This was all for nothing. You lose.")
+        exit()
 
 # body of program
 program_header("Chris' Text Adventure")
