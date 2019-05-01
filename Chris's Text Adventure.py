@@ -12,7 +12,7 @@ import random
 
 # function that chooses a random enemy from many choices
 def randenemy():
-    enemy = random.randint(1,10)
+    enemy = random.randint(1, 10)
     if enemy == 1:
         attacker = "Skeleton"
         print("A skeleton has decided to attack you!")
@@ -46,7 +46,7 @@ def randenemy():
 
 # randomly chooses 1 of many characters
 def character():
-    number = random.randint(1,8)
+    number = random.randint(1, 8)
     if number == 1:
         print("You are a wizard. You are the master of magic and are very wise.")
     elif number == 2:
@@ -71,7 +71,7 @@ def intro():
     if answer == "yes" or answer == "Yes":
         print("You chose to go in...")
     elif answer == "no" or answer == "No":
-        print("You chose to run away like a whimp.")
+        print("You chose to run away like a loser. You lose.")
         exit()
     else:
         print("I said yes or no didn't I?")
@@ -93,8 +93,8 @@ def fighting():
     enemyhealth=15
     while health > 0 or enemyhealth > 0:
         playerfight = input("Attack? Yes or No?")
-        healthdeduction = random.randint(0,3)
-        enemydeduction = random.randint(2,5)
+        healthdeduction = random.randint(0, 3)
+        enemydeduction = random.randint(2, 5)
         if playerfight == "Yes" or playerfight == "yes":
             enemyhealth= enemyhealth- enemydeduction
             health = health - healthdeduction
@@ -145,8 +145,10 @@ def right():
         exit()
     if stairs == "No" or stairs == "no":
         print("You chose to be safe and avoided the step and continued on your way.")
-    print("You finally reach the end of the steps and go through the doorway at the bottom. The door seems to be missing, where did it go?")
-    print("There is a large gold bar in the middle of the room. Of course you take it, who wouldn't?")
+    print("You finally reach the end of the steps and go through the doorway at the bottom. The door seems to be missing, where did it go? You step into the room.")
+    randenemy()
+    fighting()
+    print("After the battle you notice a large gold bar in the middle of the room. Of course you take it, who wouldn't?")
     gold = input("After you take the bar you start running back the way you came. (1)Do you go carefully or (2)run as fast as you can?")
     if gold == "1":
         print("You chose to run carefully back to the entrance avoiding all the traps and just barely making it out before the place collapses!")
