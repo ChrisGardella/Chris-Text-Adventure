@@ -74,12 +74,12 @@ def tunnelchoice():
 
 # function that controls battles where damage is based off random numbers
 def fighting():
-    health=10
-    enemyhealth=20
+    health=15
+    enemyhealth=15
     while health > 0 or enemyhealth > 0:
         playerfight = input("Attack? Yes or No?")
         healthdeduction = random.randint(0,3)
-        enemydeduction = random.randint(3,5)
+        enemydeduction = random.randint(2,5)
         if playerfight == "Yes" or playerfight == "yes":
             enemyhealth= enemyhealth- enemydeduction
             health = health - healthdeduction
@@ -94,7 +94,7 @@ def fighting():
                 enemyhealth=20
                 break
         if playerfight == "no" or playerfight == "No":
-            print("You chose not to fight and the enemy killed you.")
+            print("You chose not to fight and the enemy killed you. You lose.")
             exit()
 
 # Story path if you chose right tunnel
@@ -138,14 +138,23 @@ def right():
         print("Congrats you made it out with the treasure!You win!")
         exit()
     if gold == "2":
-        print("You chose to run back quickly without being careful and accidently drop the bar. To make things worse a giant boulder falls and crushes you.")
+        print("You chose to run back quickly without being careful and accidentally drop the bar. To make things worse a giant boulder falls and crushes you.")
         print("This was all for nothing. You lose.")
         exit()
 
 # story path if you chose left tunnel
 def left():
-    print("left")
-    # this is left path
+    print("You walk down the dark tunnel lined with carved stone and cobwebs.")
+    print("As you walk down the tunnel it splits onto two different paths, down one you hear a strange noise.")
+    noise = input("Do you follow the noise?")
+    if noise == "Yes" or noise == "yes":
+        print("You chose to follow the noise like a crazy person. You see a room at the end of this tunnel.")
+        print("You open the door slowly and enter......")
+        randenemy()
+        fighting()
+        print("After you defeated the enemy you coninue to the end of the room and leave. Once you exit, you notice that the other tunnel would have lead to the same area.")
+    if noise == "No" or noise == "no":
+        print("You decide to not go near the noise like a normal person and head down the path without the noise.")
 
 # body of program
 program_header("Chris' Text Adventure")
