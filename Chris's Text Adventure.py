@@ -194,6 +194,8 @@ def left():
 # body of program
 program_header("Chris' Text Adventure")
 print("")
+print("Welcome to Chris' Text Adventure!")
+print("")
 print("You have traveled a long way to find a temple you saw in a dream.... and it was true! You see the door in front of you.")
 character()
 intro()
