@@ -152,9 +152,17 @@ def left():
         print("You open the door slowly and enter......")
         randenemy()
         fighting()
-        print("After you defeated the enemy you coninue to the end of the room and leave. Once you exit, you notice that the other tunnel would have lead to the same area.")
+        print("After you defeated the enemy you continue to the end of the room and leave. Once you exit, you notice that the other tunnel would have lead to the same area.")
     if noise == "No" or noise == "no":
         print("You decide to not go near the noise like a normal person and head down the path without the noise.")
+        trap2 = input("You start to walk down the path. Do you check for traps? Yes or No?")
+        if trap2 == "Yes" or trap2 == "yes":
+            print("You check carefully for traps and find a pressure plate, you don't know what it does but you successfully avoid it.")
+        else:
+            print("You decided to not check for traps and stepped on a pressure plate, two flamethrowers in the wall ignite and you burn alive, you died...")
+            exit()
+        print("At the end of the path you notice the other path would have lead to here anyway. What was that noise then?")
+    print("You continue on your way and reach a large door that is closed.")
 
 # body of program
 program_header("Chris' Text Adventure")
