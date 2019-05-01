@@ -1,8 +1,8 @@
 # Chris-Text-Adventure
 
-The way this game works is there will be a series of events where the player can choose what to do from two options. Depending on what the players choose it will change the story. The way I made this game work was using the Random module. I imported random, which is already included with python in order to choose what type of character the player is, what enemy would spawn as well as the damage amount when fighting.
+The way this game works is there will be a series of events where the player can choose what to do from two options. Depending on what the players choose it will change the story. Some choices will result in instant game over and will end the program and the player must start over. The way I made this game work was using the Random module. I imported random, which is already included with python in order to choose what type of character the player is, what enemy would spawn as well as the damage amount when fighting.
 
-In order for this game to work properly you have to use Python version 3.7, if it is an earlier version the user inputs will not work and the program will not run.
+In order for this game to work properly you have to use Python version 3.7, if it is an earlier version the user inputs will not work and the program will not run. Also remember to type your answers correctly or it will not work: for example you cannot put "cheese" for a yes or no question.
 
 As far as character type goes it has no effect besides a description of your character.
 

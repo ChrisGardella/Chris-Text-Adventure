@@ -10,9 +10,9 @@ def program_header(title):
 # import random library
 import random
 
-# function that chooses a random enemy from 7 choices
+# function that chooses a random enemy from many choices
 def randenemy():
-    enemy = random.randint(1,7)
+    enemy = random.randint(1,10)
     if enemy == 1:
         attacker = "Skeleton"
         print("A skeleton has decided to attack you!")
@@ -34,10 +34,19 @@ def randenemy():
     elif enemy == 7:
         attacker = "Giant Spider"
         print("A giant spider has decided to attack you!")
+    elif enemy == 8:
+        attacker = "Ghost"
+        print("A ghost has decided to attack you! How is this even possible?")
+    elif enemy == 9:
+        attacker = "Goblin"
+        print("A goblin has decided to attack you!")
+    elif enemy == 10:
+        attacker = "demon"
+        print("A demon has decided to attack you!")
 
-# randomly chooses 1 of 5 characters
+# randomly chooses 1 of many characters
 def character():
-    number = random.randint(1,5)
+    number = random.randint(1,8)
     if number == 1:
         print("You are a wizard. You are the master of magic and are very wise.")
     elif number == 2:
@@ -48,6 +57,12 @@ def character():
         print("Your are an archer. You are a skilled bowman who rarely misses.")
     elif number == 5:
         print("You are an assassin. You are really good at killing stuff.")
+    elif number == 6:
+        print("You are a baker. You know how to make bread and that's pretty much it, this is way out of your comfort zone.")
+    elif number == 7:
+        print("You are a very wealthy adventurer. You have been waiting for this your whole life.")
+    elif number == 8:
+        print("You are a time-traveling accountant. What other explanation do you need? ")
 
 # function for intro, loops until someone chooses yes or no
 def intro():
